@@ -14,6 +14,7 @@ RUN mkdir /judge /problems && cd /judge && \
     python3 -m venv --prompt=DMOJ /env && \
     /env/bin/pip3 install cython && \
     /env/bin/pip3 install -e . && \
+    /evn/bin/pip3 install setuptools && \
     /env/bin/python3 setup.py develop && \
     HOME=~judge . ~judge/.profile && \
     runuser -u judge -w PATH -- /env/bin/dmoj-autoconf -V > /judge-runtime-paths.yml && \
